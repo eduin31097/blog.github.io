@@ -1,0 +1,419 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{ 
+    margin: 0;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2rem;
+    
+    
+}
+/*botom search*/
+.element-search{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+     height: 70px;
+    background-color: rgb(0, 20, 43);
+    z-index: 1;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#icono2:checked ~ .element-search {
+    opacity: 1;
+    visibility: visible;
+}
+
+    
+    
+    .element-search2{
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        transform: translateX(100%);
+        transition: all 1s ease;
+    }
+    
+
+#icono2:checked ~ .element-search .element-search2 {
+    transform: translateX(0%);
+}
+
+
+    .element-search #barrabusqueda{
+    padding: 10px;
+    margin: auto 10px;
+    width: 90%;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    background-color: rgb(40, 43, 66);
+    border: 2px solid rgba(136, 255, 0, 0.815);
+
+}
+
+
+@media (max-width:565px){
+    .element-search{
+        position: fixed;
+        top: 3.700rem;
+        left: 0;
+    }
+}
+#botom{
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid rgba(136, 255, 0, 0.815);
+    left: 0;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.equis2{
+    font-weight: 600;
+    padding: 5px 0.6rem;
+    margin: 0 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #fff;
+    border: 2px solid rgba(255, 0, 0, 0.815);
+}
+.equis2:hover{
+    color: red;
+    background: linear-gradient(35deg,rgb(150, 152, 153),rgb(37, 0, 0));
+    transition: all 0.500s ease;
+
+}
+#botom:hover{
+    color: rgb(0, 199, 43);
+    background:  linear-gradient(40deg,rgb(5, 1, 88),rgb(14, 12, 12));
+    transition: all 0.500s ease;
+}
+
+#icono2{
+    display: none;
+}
+
+/*fin boton searh*/
+/*funciones de checkbox*/
+.equis{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+}
+
+#icon{
+    display: none;
+}
+
+.menu{
+    width: 100%;
+    max-width: 300px;
+    position: fixed;
+    top: 70px;;left: 0;
+    
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+    
+    
+}
+@media (max-width:550px){
+    .menu{
+        top: 110px;
+        position:fixed;
+    }
+}
+#icon:checked ~ .menu {
+    opacity: 2;
+    visibility: visible;
+}
+
+.menu-container{
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.92);
+    border-top: 3px solid rgb(0, 255, 242);
+        border-radius: 5px;
+    transition: all 1s ease;
+
+
+
+}
+#icon:checked ~ .menu {
+    transform: translateX(0%);
+}
+.menu-container nav  {
+    transform: translateY(15%);
+}
+
+.menu nav a{
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: rgb(250, 255, 250);
+    font-weight:500 ;
+    font-size: 1.1rem;
+    margin: 5px;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: all 500ms ease;
+    border-left: 4px solid transparent;
+    
+}
+
+.menu nav a:hover{ 
+    border-left: 4px solid rgb(0, 255, 234) ;
+    color: rgb(142, 0, 185);
+    background: linear-gradient(50deg,rgba(17, 17, 17, 0.3), rgb(60, 58, 61));
+
+}
+
+
+/*fin defunciones de checkbox*/
+
+/*menú de opciones*/
+.cont-menu{
+    position: fixed;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    min-height: 70px;
+    background-color: rgb(0, 5, 9);
+    border-bottom:1px solid #fff9;
+    box-shadow: 0 3px 5px rgb(221, 221, 221,0.6);
+    display: flex;
+    z-index: 1;
+}
+@media(max-width:560px){
+    .cont-menu{
+        position: fixed;
+        background-color: rgb(0,5,9);
+        }
+}
+.cont-menu .logo{
+    position: relative;
+    line-height: 70px;
+    cursor: pointer;
+}
+@media(max-width:580px){
+    .cont-menu .logo{
+        position: absolute;
+       width: 100%;
+       height: 70px;
+       display: flex;
+       z-index: -1;
+       justify-content: center;
+    }
+
+}
+
+.cont-menu .iconos{
+    cursor: pointer;
+}
+
+.cont-menu .icon, .icon2{
+    font-size: 25px;
+    color: rgb(10, 255, 235);
+    line-height: 70px;
+    padding: 0px 15px;
+    cursor: pointer;
+
+}
+.cont-menu .opciones{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.cont-menu .opciones nav a{
+    color: rgb(224, 222, 222);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent;
+}
+@media (min-width:590px){
+
+    .cont-menu .opciones nav a:hover{
+        border-bottom: 2px solid rgb(255, 253, 253);
+        border-radius: 3px;
+        padding: 10px 10px;
+        transition: all 1.5s ease;
+    }
+}
+
+@media (max-width:580px){
+    .cont-menu .opciones nav a{
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: rgb(224, 222, 222);
+        padding: 5px 20px;
+    }
+    .cont-menu .navi {
+        position: absolute;
+        left: 0;
+        top: 70px;
+        width: 100%;
+        height: 40px;
+        background-color:rgb(0, 5,9);
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        border-bottom: 1px solid #fff9;
+            box-shadow: 0 3px 5px rgb(221, 221, 221, 0.6);
+
+        
+    }
+
+}
+
+
+
+/*fin de menú opciones*/
+
+/* parte de abajo*/
+
+h4{
+    color: white;
+    font-weight: 500;
+}
+h3{
+    padding: 10px;
+    margin: 20px;
+    color: #0f0;
+    font-weight: 600;
+    font-size: 1.4rem;
+} 
+
+h2{
+    padding: 10px ;
+    margin: 10px;
+    color: #0f0;
+}
+p{
+ width: 55vw;
+ padding: auto ;
+ margin: auto ;
+
+   
+}
+@media (max-width:500px){
+    p{
+        width: 80vw;
+    }
+}
+span h1{
+    padding: 10px; 
+    margin: 5px;
+    font-size: 25px;
+}
+.contenedor-info nav{
+    display: flex;
+
+}
+.contenedor-info nav a{
+    display: block;
+    color: rgb(238, 255, 0);
+    background-color: rgb(32, 37, 65);
+    padding: 10px ;
+    margin: 20px ;
+    border-radius: 20px;
+    width:70%;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "consolas";
+    text-decoration: none;
+}
+@media (min-width:590px){
+    .contenedor-info nav a:hover{
+        background: linear-gradient(150deg,rgb(10,40,75),rgb(45,47,85),rgb(10, 40, 70))
+    }
+    
+}
+@media (max-width:550px)
+{
+    .cont{
+
+    }
+
+.contenedor-info nav a{
+    display: block;
+    align-items: center;
+    font-size: 15px;
+    padding: 10px;
+    margin: 20px 10px; 
+    width: 100%;
+}
+}
+
+.contenedor-info {
+    background-color: rgb(29, 29, 26);
+    position: relative;
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.cont{
+    width: 100%;
+    height: 100%;
+    margin: 10rem 10px;
+    padding: 10px;
+    background-color:  rgb(0, 10, 40);
+    border-top: 2px solid rgb(190, 225, 255);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.contenedor-info img{
+
+    max-width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+}
+    
+    
+ .dispensador{
+    width: 100%;
+    height: 3spx;
+    position: relative;
+    padding: 30px;
+
+}
+.dispensador div{
+    position: absolute;
+    width: 90%;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 5px rgb(255,255, 255);
+    display: flex;
+    justify-content: center;
+}
+/*fin  parte de abajo*/
+
